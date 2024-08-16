@@ -1,9 +1,0 @@
-//.env.development
-//.env.production
-
-PORT=3000
-DATABASE=backend_poo
-USERNAME=root
-PASSWORD=
-HOST=localhost
-DIALECT=mysql
