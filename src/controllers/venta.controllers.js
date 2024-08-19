@@ -27,11 +27,6 @@ export const getVentaById = async (req, res) => {
 };
 
 export const createVenta = async (req, res) => {
-  const errors = validationResult(req);
-  if (!errors.isEmpty()) {
-    return res.status(400).json({ errors: errors.array() });
-  }
-
   try {
     const venta = await VentaService.create(req.body);
     return res.status(201).json({ message: 'venta creada', venta });
@@ -39,3 +34,22 @@ export const createVenta = async (req, res) => {
     return res.status(500).json({ message: 'Error al realizar la venta', error: err.message });
   }
 }
+
+export const updateVenta = async (req, res) => {
+  try {
+    const venta = await VentaService.update(req.params.id, req.body);
+    return res.json({ message: 'venta actualizada', venta });
+  } catch (err) {
+    return res.status(500).json({ message: 'Error al actualizar venta', error: err.message });
+  }
+};
+
+export const deleteVenta = async (req, res) => {
+  try {
+    await VentaService.delete(req.params.id);
+    return res.json({ message: 'Venta eliminada' });
+  } catch (err) {
+    return res.status(500).json({ message: 'Error al eliminar la venta', error: err.message });
+  }
+};
+

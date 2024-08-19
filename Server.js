@@ -3,7 +3,7 @@ import cors from 'cors'
 import morgan from "morgan";
 import { PORT } from './src/config/conf.js'
 import productRoutes from './src/routes/productos.routes.js'
-import userRoutes from './src/routes/productos.routes.js'
+import userRoutes from './src/routes/user.routes.js'
 import compraRoutes from './src/routes/compra.routes.js'
 import ventaRoutes from './src/routes/venta.routes.js'
 import carritoRoutes from './src/routes/carrito.routes.js'

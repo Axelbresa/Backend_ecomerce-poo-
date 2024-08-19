@@ -27,11 +27,6 @@ export const getCompraById = async (req, res) => {
 };
 
 export const createCompra = async (req, res) => {
-  const errors = validationResult(req);
-  if (!errors.isEmpty()) {
-    return res.status(400).json({ errors: errors.array() });
-  }
-
   try {
     const compra = await CompraService.create(req.body);
     return res.status(201).json({ message: 'Compra creada', compra });
@@ -41,11 +36,6 @@ export const createCompra = async (req, res) => {
 };
 
 export const updateCompra = async (req, res) => {
-  const errors = validationResult(req);
-  if (!errors.isEmpty()) {
-    return res.status(400).json({ errors: errors.array() });
-  }
-
   try {
     const compra = await CompraService.update(req.params.id, req.body);
     return res.json({ message: 'Compra actualizada', compra });

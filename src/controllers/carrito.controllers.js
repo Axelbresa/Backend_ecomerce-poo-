@@ -27,11 +27,6 @@ export const getCarritoById = async (req, res) => {
 };
 
 export const createCarrito = async (req, res) => {
-  const errors = validationResult(req);
-  if (!errors.isEmpty()) {
-    return res.status(400).json({ errors: errors.array() });
-  }
-
   try {
     const carrito = await CarritoService.create(req.body);
     return res.status(201).json({ message: 'Carrito creado', carrito });
@@ -41,10 +36,6 @@ export const createCarrito = async (req, res) => {
 };
 
 export const updateCarrito = async (req, res) => {
-  const errors = validationResult(req);
-  if (!errors.isEmpty()) {
-    return res.status(400).json({ errors: errors.array() });
-  }
 
   try {
     const carrito = await CarritoService.update(req.params.id, req.body);
