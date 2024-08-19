@@ -1,8 +1,9 @@
 // src/models/Venta.js
 import { DataTypes, Model } from 'sequelize';
 import sequelize from '../db/db.js';
-import UserModel from './User_model.js'; // Asumiendo que el modelo de usuario está en 'UserModel.js'
-import ProductModel from './Product_model.js'; // Asumiendo que el modelo de producto está en 'ProductModel.js'
+import UserModel from './User_model.js'; 
+import ProductModel from './Product_model.js';
+
 
 class VentaModel extends Model {}
 
