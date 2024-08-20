@@ -1,4 +1,5 @@
 import { DataTypes, Model } from "sequelize";
+import ProductModel from './Product_model.js'; 
 import sequelize from "../db/db.js"; 
 
 class User extends Model {}
@@ -22,9 +23,9 @@ User.init({
     defaultValue: "cliente",
   }
 }, {
-  sequelize,
   modelName: "User",
   timestamps: true,
+  sequelize,
 });
 
 export default User;

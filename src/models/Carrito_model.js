@@ -24,8 +24,7 @@ CarritoModel.init(
   }
 );
 
-// Relaciones
 CarritoModel.belongsTo(UserModel, { foreignKey: 'userId', as: 'user' });
-CarritoModel.belongsTo(ProductModel, { foreignKey: 'productId', as: 'product' });
+CarritoModel.belongsTo(ProductModel, { foreignKey: 'productId', as: 'product' }); 
 
 export default CarritoModel;

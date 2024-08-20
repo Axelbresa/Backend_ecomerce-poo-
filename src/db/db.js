@@ -1,7 +1,7 @@
 // dbConnection.js
 import { Sequelize } from "sequelize";
 import {DATABASE, USERNAME, PASSWORD, HOST, DIALECT} from "../config/conf.js";
-
+ 
 const sequelize = new Sequelize(
     DATABASE,
     USERNAME, 
@@ -12,8 +12,8 @@ const sequelize = new Sequelize(
     }
 );
 
-sequelize.sync({ force: false })
-  .then(() => {
+sequelize.sync({ force: true })
+.then(() => {
     console.log("Tablas sincronizadas");
   })
   .catch(err => {

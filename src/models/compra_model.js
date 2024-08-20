@@ -3,6 +3,7 @@ import { DataTypes, Model } from 'sequelize';
 import sequelize from "../db/db.js"; 
 import UserModel from './User_model.js'; 
 import ProductModel from './Product_model.js'; 
+
 class CompraModel extends Model {}
 
 CompraModel.init(
@@ -23,8 +24,7 @@ CompraModel.init(
   }
 );
 
-// Relaciones
 CompraModel.belongsTo(UserModel, { foreignKey: 'userId', as: 'user' });
-CompraModel.belongsTo(ProductModel, { foreignKey: 'productId', as: 'product' });
+CompraModel.belongsTo(ProductModel, { foreignKey: 'productId', as: 'product' });    
 
 export default CompraModel;

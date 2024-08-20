@@ -20,19 +20,14 @@ Product.init({
     type: DataTypes.INTEGER,
     allowNull: false,
   },
-  userId: {
-    type: DataTypes.INTEGER,
-    allowNull: false,
-    references: {
-      model: User,
-      key: "id"
-    }
-  }
 }, {
   sequelize,
   modelName: "Product",
   tableName: "Product",
   timestamps: true,
 });
+
+User.hasMany(Product, { foreignKey: 'userId', as: 'product' });
+Product.belongsTo(User, { foreignKey: 'id', as: 'product' });
 
 export default Product;

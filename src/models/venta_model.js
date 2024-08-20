@@ -25,7 +25,6 @@ VentaModel.init(
   }
 );
 
-// Relaciones
 VentaModel.belongsTo(UserModel, { foreignKey: 'userId', as: 'user' });
 VentaModel.belongsTo(ProductModel, { foreignKey: 'productId', as: 'product' });
 
