@@ -1,20 +1,22 @@
-# Taller de Lenguajes de Programación IV
+# E-Commerce API
+Esta es una API para un sistema de E-Commerce que permite gestionar usuarios, productos, compras, ventas y carritos. La API está construida con Node.js, Express Y MySql
 
-### Clase 04
+# Instalación
+Clona el repositorio:
+git clone https://github.com/Axelbresa/Backend_ecomerce-poo-
+Intala las dependencias:
 
-Desarrollo de servidor back-end implementando principios de Programación Orientada a Objetos en JavaScript
+npm install
 
-Requisitos:
-- node version 20.1.0 o superior
-- mongodb version 5.1.0 o superior
+# Configura las variables de entorno:
 
+PORT=3000               
+DATABASE=your_database  
+USERNAME=your_username  
+PASSWORD=your_password  
+HOST=your_host          
+DIALECT=your_dialect    
 
-Ejecutar en desarrollo
-```	
-node --env-file .env.development --watch index.js
-```
-
-Ejecutar en producción
-```
-node --env-file .env.production index.js
-```
+# Inicia el servidor:
+```bash
+npm run dev
