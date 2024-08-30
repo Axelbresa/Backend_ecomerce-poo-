@@ -1,6 +1,6 @@
 import { DataTypes, Model } from "sequelize";
-import sequelize from "../db/db.js"; // Asegúrate de que la conexión a la base de datos esté bien importada
-import User from "./User_model.js"; 
+import sequelize from "../db/db.ts"; // Asegúrate de que la conexión a la base de datos esté bien importada
+import User from "./User_model.ts"; 
 
 class Product extends Model {}
 

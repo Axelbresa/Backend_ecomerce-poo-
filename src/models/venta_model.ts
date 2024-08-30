@@ -1,8 +1,8 @@
 // src/models/Venta.js
 import { DataTypes, Model } from 'sequelize';
-import sequelize from '../db/db.js';
-import UserModel from './User_model.js'; 
-import ProductModel from './Product_model.js';
+import sequelize from '../db/db.ts';
+import UserModel from './User_model.ts'; 
+import ProductModel from './Product_model.ts';
 
 
 class VentaModel extends Model {}

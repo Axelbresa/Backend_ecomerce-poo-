@@ -1,9 +1,11 @@
 // dbConnection.js
 import { Sequelize } from "sequelize";
-import {DATABASE, USERNAME, PASSWORD, HOST, DIALECT} from "../config/conf.js";
+import {DATABASE, USERNAME, PASSWORD, HOST, DIALECT} from "../config/conf.ts";
  
+type Env= undefined
+
 const sequelize = new Sequelize(
-    DATABASE,
+    DATABASE ,
     USERNAME, 
     PASSWORD,
     {

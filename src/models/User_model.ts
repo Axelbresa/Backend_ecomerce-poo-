@@ -1,6 +1,6 @@
 import { DataTypes, Model } from "sequelize";
-import ProductModel from './Product_model.js'; 
-import sequelize from "../db/db.js"; 
+import ProductModel from './Product_model.ts'; 
+import sequelize from "../db/db.ts"; 
 
 class User extends Model {}
 
