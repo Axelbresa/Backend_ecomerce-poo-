@@ -1,16 +1,14 @@
 // dbConnection.js
-import { Sequelize } from "sequelize";
+import { Sequelize, Dialect } from "sequelize";
 import {DATABASE, USERNAME, PASSWORD, HOST, DIALECT} from "../config/conf.ts";
  
-type Env= undefined
-
 const sequelize = new Sequelize(
-    DATABASE ,
-    USERNAME, 
-    PASSWORD,
+    DATABASE as string,
+    USERNAME as string, 
+    PASSWORD as string,
     {
         host: HOST,
-        dialect: DIALECT,
+        dialect: DIALECT as Dialect,
     }
 );
 
@@ -23,7 +21,7 @@ sequelize.sync({ force: true })
   });
 
 
-export const dbConnection = async () => {
+export const dbConnection = async () : Promise<void> => {
     try {
         await sequelize.authenticate();
         console.log('Nos hemos conectado a la base de datos');
